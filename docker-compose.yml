@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: hono-app
+    ports:
+      - "5444:5444"
+    volumes:
+      - .:/app
+      - /app/node_modules # Prevents local node_modules from overwriting container's
+    environment:
+      - NODE_ENV=production
