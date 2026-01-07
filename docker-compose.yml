@@ -1,6 +1,7 @@
 services:
   app:
     build: .
+    env_file: ./.env
     container_name: hono-app
     ports:
       - "5444:5444"
