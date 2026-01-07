@@ -1,5 +1,7 @@
 import { Hono } from "hono";
+import connectDB from "./db";
 
+connectDB();
 const app = new Hono();
 
 app.get("/", (c) => {
