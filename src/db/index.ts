@@ -18,7 +18,7 @@ const connectDB = async (defualtAdmin = true) => {
   try {
     if (process.env.MONGO_URI !== undefined) {
       const conn = await mongoose.connect(process.env.MONGO_URI, {
-        minPoolSize: 10,
+        minPoolSize: 100,
         maxPoolSize: 500,
         maxIdleTimeMS: 10000, // Closes idle connections after 10 seconds
       });
