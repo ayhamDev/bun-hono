@@ -21,7 +21,7 @@ import brandModel from "./db/models/product/brand.model";
 connectDB();
 const app = new Hono();
 
-app.get("/", async (c) => {
+app.get("/bobo", async (c) => {
   const res = await Promise.all([
     adminModel.find().lean(),
     cartModel.find().lean(),
