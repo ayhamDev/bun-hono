@@ -3,7 +3,7 @@ FROM oven/bun:latest AS builder
 WORKDIR /app
 
 COPY package.json bun.lockb* ./
-RUN bun install --frozen-lockfile
+RUN bun install
 
 COPY . .
 # Builds into ./dist/index.js targeting Node.js
